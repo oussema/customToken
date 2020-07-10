@@ -6,7 +6,7 @@ const Deploy = ({name,symbol,decimals,totalSupply}) => {
     const [isLoading,setIsLoading]=useState(true);
     useEffect(() => {
         const deploy = async () => {
-            window.ethereum.enable();
+            await window.ethereum.enable();
             const web3=new Web3(window.web3.currentProvider);
             const accounts = await web3.eth.getAccounts();
             console.log('Attempting to deploy from account', accounts[0]);
