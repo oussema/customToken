@@ -21,7 +21,7 @@ const Deploy = ({name,symbol,decimals,totalSupply}) => {
         }
         deploy();
 
-    }, [])
+    })
 
     return (
         <div>
